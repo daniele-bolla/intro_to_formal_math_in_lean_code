@@ -1,13 +1,19 @@
-# IntroToFormalMathInLeanCode
+# Intro To Formal Math In Lean Code
 
-## GitHub configuration
+## Description
 
-To set up your new GitHub repository, follow these steps:
+Code example used in [Intro to Formal Mathematics in Lean](https://github.com/daniele-bolla/intro_to_formal_math_in_lean)
 
-* Under your repository name, click **Settings**.
-* In the **Actions** section of the sidebar, click "General".
-* Check the box **Allow GitHub Actions to create and approve pull requests**.
-* Click the **Pages** section of the settings sidebar.
-* In the **Source** dropdown menu, select "GitHub Actions".
+* Code for Chapter 1 and 2: 
+    -- `IntroToFormalMathInLeanCode/ExamplesNoMathlib.lean` 
+* Code for Chapter 3: 
+    -- `IntroToFormalMathInLeanCode/ExamplesMathlib.lean` 
+    -- `IntroToFormalMathInLeanCode/Rat.lean` 
+ * Code for Chapter 4:
+    -- `IntroToFormalMathInLeanCode/ExamplesMathlib.lean` 
+    -- `IntroToFormalMathInLeanCode/ContinuityExample.lean` 
+    -- `IntroToFormalMathInLeanCode/TopologistSineCurveDaniele` 
+    -- `IntroToFormalMathInLeanCode/TopologistSineCurve` 
 
-After following the steps above, you can remove this section from the README file.
+## Version
+- v4.25.0
