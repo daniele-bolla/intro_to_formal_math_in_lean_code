@@ -160,7 +160,7 @@ lemma add_nonneg (a b : myRat) : 0 ≤ a → 0 ≤ b → 0 ≤ a + b := by
 -- Section 6: Algebraic Structures
 -- ========================================
 
-instance : PartialOrder myRat where
+noncomputable instance : LinearOrder myRat where
   le_refl p := by
     induction p using Quotient.ind with | _ a =>
     exact myPreRat.le_refl a
@@ -178,4 +178,12 @@ instance : PartialOrder myRat where
     intro hab hba
     exact Quotient.sound (myPreRat.le_antisymm a b hab hba)
 
+  le_total p q := by
+    induction p using Quotient.ind with | _ a =>
+    induction q using Quotient.ind with | _ b =>
+    cases Int.le_total (a.num * b.den) (b.num * a.den) with
+    | inl h => exact Or.inl h
+    | inr h => exact Or.inr h
+
+  toDecidableLE  := Classical.decRel _
 end myRat
